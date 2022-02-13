@@ -10,25 +10,28 @@ static const unsigned int gappov    = 10;       /* vert outer gap between window
 static       int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = {"RobotoMono Nerd Font:pixelsize=14", "JoyPixels:pixelsize=10:antialias=true:autohint=true"};
+static const char *fonts[]          = {"RobotoMono Nerd Font:pixelsize=13:antialias=true:autohint=true", "JoyPixels:pixelsize=10:antialias=true:autohint=true"};
 static const char dmenufont[]       = "RobotoMono Nerd Font:pixelsize=14:antialias=true:autohint=true";
-static const int horizpadbar        = 5;        /* horizontal padding for statusbar */
-static const int vertpadbar         = 5;        /* vertical padding for statusbar */
+static const int horizpadbar        = 8;        /* horizontal padding for statusbar */
+static const int vertpadbar         = 8;        /* vertical padding for statusbar */
+static const char col_black[]       = "#000000";
+static const char col_white[]       = "#ffffff";
+static const char col_red[]         = "#ff0000";
+static const char col_bg[]          = "#1e222a";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
 static const char col_cyan[]        = "#005577";
-static const char col_red[]         = "#ff0000";
 static const char *colors[][3]      = {
-	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_red  },
-	[SchemeStatus]  = { col_gray3, col_gray1,  "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
-	[SchemeTagsSel]  = { col_gray4, col_cyan,  "#000000"  }, // Tagbar left selected {text,background,not used but cannot be empty}
-    [SchemeTagsNorm]  = { col_gray3, col_gray1,  "#000000"  }, // Tagbar left unselected {text,background,not used but cannot be empty}
-    [SchemeInfoSel]  = { col_gray4, col_cyan,  "#000000"  }, // infobar middle  selected {text,background,not used but cannot be empty}
-    [SchemeInfoNorm]  = { col_gray3, col_gray1,  "#000000"  }, // infobar middle  unselected {text,background,not used but cannot be empty}
+	/*                     fg         bg         border   */
+	[SchemeNorm]     = { col_white, col_bg, col_gray2 },
+	[SchemeSel]      = { col_gray4, col_cyan, col_red },
+	[SchemeStatus]   = { col_white, col_bg, col_black }, // Statusbar right {text,background,not used but cannot be empty}
+	[SchemeTagsSel]  = { col_white, col_cyan, col_black }, // Tagbar left selected {text,background,not used but cannot be empty}
+    [SchemeTagsNorm] = { col_white, col_bg, col_black }, // Tagbar left unselected {text,background,not used but cannot be empty}
+    [SchemeInfoSel]  = { col_white, col_bg, col_black }, // infobar middle  selected {text,background,not used but cannot be empty}
+    [SchemeInfoNorm] = { col_white, col_bg, col_black }, // infobar middle  unselected {text,background,not used but cannot be empty}
 };
 
 /* tagging */
